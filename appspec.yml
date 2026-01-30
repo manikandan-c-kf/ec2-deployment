@@ -1,6 +1,10 @@
 version: 0.0
 os: linux
 
+files:
+  - source: scripts/git_deploy.sh
+    destination: /home/ubuntu/ec2-deployment
+
 hooks:
   ApplicationStart:
     - location: scripts/git_deploy.sh
