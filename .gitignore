@@ -1,0 +1,39 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pdb
+
+# Virtual environment
+venv/
+.env/
+*.env
+
+# FastAPI / Uvicorn
+*.log
+
+# IDE files
+.vscode/
+.idea/
+
+# Byte-compiled
+*.so
+
+# PyInstaller
+*.spec
+dist/
+build/
+
+# Test/coverage
+.coverage
+*.coverage
+cache/
+pytest.cache/
+
+# MyPy / Type Check
+.mypy_cache/
+
+# OS files
+.DS_Store
+Thumbs.db
