@@ -1,19 +1,17 @@
 #!/bin/bash
 
 PROJECT_DIR="/home/ubuntu/ec2-deployment"
+VENV_DIR="$PROJECT_DIR/venv"
 
 cd $PROJECT_DIR || exit 1
 
-echo "Running git reset..."
-git reset --hard
+echo "Creating venv if not exists..."
+python3 -m venv $VENV_DIR
 
-echo "Fetching latest code..."
-git fetch --all
-
-echo "Pulling latest code..."
-git pull origin master
+echo "Activating venv..."
+source $VENV_DIR/bin/activate
 
 echo "Installing dependencies..."
-pip3 install -r requirements.txt --user
+pip install -r requirements.txt
 
 echo "Deployment finished successfully."
